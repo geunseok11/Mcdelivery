@@ -20,7 +20,12 @@ const Contents = styled.ScrollView`
 const Home = (props) => {
   return (
     <Container>
-      <Contents></Contents>
+      <Contents>
+        <View></View>
+        <View></View>
+        <View></View>
+      </Contents>
+      <Nav props={props} />
     </Container>
   );
 };
