@@ -7,6 +7,8 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
+import Nav from '../component/Nav';
+import Header from '../component/Header';
 
 const Container = styled.SafeAreaView`
   flex: 1;
@@ -20,6 +22,7 @@ const Contents = styled.ScrollView`
 const Home = (props) => {
   return (
     <Container>
+      <Header props={props} />
       <Contents>
         <View></View>
         <View></View>
