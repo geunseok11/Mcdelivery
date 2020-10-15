@@ -25,7 +25,7 @@ const Nav = (props) => {
     <NavView>
       <NavIcon
         onPress={() => {
-          props.navigation.goBack();
+          props.navigation.push('Home');
         }}></NavIcon>
 
       <NavIcon
