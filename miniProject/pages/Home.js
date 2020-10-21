@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import Nav from '../component/Nav';
 import Header from '../component/Header';
+import styled from 'styled-components';
 
 const Container = styled.SafeAreaView`
   flex: 1;
