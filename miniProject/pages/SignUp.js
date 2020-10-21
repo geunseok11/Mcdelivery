@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from '../component/Nav';
 import Header from '../component/Header';
+import styled from 'styled-components';
 import {
   StyleSheet,
   Button,
@@ -10,6 +11,15 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
+
+const Container = styled.SafeAreaView`
+  flex: 1;
+  padding: 10px;
+`;
+
+const Contents = styled.ScrollView`
+  flex: 1;
+`;
 
 const SignUp = (props) => {
   return (
