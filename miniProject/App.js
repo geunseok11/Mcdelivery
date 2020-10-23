@@ -18,13 +18,22 @@ import {
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {Provider} from 'react-redux';
 import Navigator from './navigator/Navigator';
+import configureStore from './store/configureStore';
+
+const Theme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    background: '#fbf5f5',
+  },
+};
 
 const App: () => React$Node = () => {
   return (
-    <Provider>
+    <Provider store={configureStore}>
       <StatusBar style="auto" />
 
-      <NavigationContainer>
+      <NavigationContainer theme={Theme}>
         <Navigator />
       </NavigationContainer>
     </Provider>
