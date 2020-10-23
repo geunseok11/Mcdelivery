@@ -26,6 +26,7 @@ const SignUp = (props) => {
     <Container>
       <Header props={props} />
       <Contents></Contents>
+      <Nav props={props} />
     </Container>
   );
 };
