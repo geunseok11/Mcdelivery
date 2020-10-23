@@ -26,7 +26,7 @@ const Menu = (props) => {
           <Text onPress={() => props.navigation.push('McDelivery')}>
             추천메뉴
           </Text>
-          <Text onPress={() => props.navigation.push('McDelivery')}>
+          {/* <Text onPress={() => props.navigation.push('McDelivery')}>
             버거&세트
           </Text>
           <Text onPress={() => props.navigation.push('McDelivery')}>
@@ -38,7 +38,7 @@ const Menu = (props) => {
           </Text>
           <Text onPress={() => props.navigation.push('McDelivery')}>
             해피밀
-          </Text>
+          </Text> */}
         </View>
       </Contents>
       <Nav props={props} />
