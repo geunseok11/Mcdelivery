@@ -16,7 +16,9 @@ const Bookmark = (props) => {
   return (
     <Container>
       <Header props={props} />
-      <Contents></Contents>
+      <Contents>
+        <Text>저장된 주문</Text>
+      </Contents>
       <Nav props={props} />
     </Container>
   );
