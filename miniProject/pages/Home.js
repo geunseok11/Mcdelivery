@@ -35,3 +35,13 @@ const Home = (props) => {
 };
 
 export default Home;
+
+const styles = StyleSheet.create({
+  viewPager: {
+    flex: 1,
+    borderColor: 'green',
+    // border
+    borderWidth: 100,
+    borderStyle: 'solid',
+  },
+});
