@@ -23,13 +23,15 @@ const Contents = styled.ScrollView`
 const Home = (props) => {
   return (
     <Container>
-      <Header props={props} />
+      {/* <Header props={props} /> */}
       <Contents>
-        <View></View>
+        <View>
+          <Text>hello</Text>
+        </View>
         <View></View>
         <View></View>
       </Contents>
-      <Nav props={props} />
+      {/* <Nav props={props} /> */}
     </Container>
   );
 };
