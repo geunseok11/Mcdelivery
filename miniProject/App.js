@@ -16,9 +16,10 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
-import {Provider} from 'react-redux';
+// import {Provider} from 'react-redux';
 import Navigator from './navigator/Navigator';
-import configureStore from './store/configureStore';
+import Home from './pages/Home';
+// import configureStore from './store/configureStore';
 
 const Theme = {
   ...DefaultTheme,
@@ -30,13 +31,16 @@ const Theme = {
 
 const App: () => React$Node = () => {
   return (
-    <Provider store={configureStore}>
-      <StatusBar style="auto" />
+    <View>
+      <Home></Home>
+    </View>
+    // <Provider store={configureStore}>
+    //   <StatusBar style="auto" />
 
-      <NavigationContainer theme={Theme}>
-        <Navigator />
-      </NavigationContainer>
-    </Provider>
+    //   <NavigationContainer theme={Theme}>
+    //     <Navigator />
+    //   </NavigationContainer>
+    // </Provider>
   );
 };
 
