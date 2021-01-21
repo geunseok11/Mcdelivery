@@ -31,9 +31,8 @@ const Theme = {
 
 const App: () => React$Node = () => {
   return (
-    <View>
-      <Home></Home>
-    </View>
+    <Home />
+
     // <Provider store={configureStore}>
     //   <StatusBar style="auto" />
 

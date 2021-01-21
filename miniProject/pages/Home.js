@@ -26,7 +26,7 @@ const Home = (props) => {
       {/* <Header props={props} /> */}
       <Contents>
         <View>
-          <Text>hello</Text>
+          <Text>menu</Text>
         </View>
         <View></View>
         <View></View>
