@@ -16,6 +16,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
+
+import {createStackNavigator} from '@react-navigation/stack';
 // import {Provider} from 'react-redux';
 import Navigator from './navigator/Navigator';
 import Home from './pages/Home';
@@ -29,9 +31,25 @@ const Theme = {
   },
 };
 
+const Stack = createStackNavigator();
+
 const App: () => React$Node = () => {
   return (
-    <Home />
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{
+            title: 'My home',
+            headerStyle: {
+              backgroundColor: '#f4511e',
+            },
+            headerTintColor: '#fff',
+          }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
 
     // <Provider store={configureStore}>
     //   <StatusBar style="auto" />
