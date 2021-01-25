@@ -22,17 +22,20 @@ const Contents = styled.ScrollView`
 
 const Home = (props) => {
   return (
-    <Container>
-      {/* <Header props={props} /> */}
-      <Contents>
-        <View>
-          <Text>menu</Text>
-        </View>
-        <View></View>
-        <View></View>
-      </Contents>
-      {/* <Nav props={props} /> */}
-    </Container>
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <Text>Home Screen</Text>
+    </View>
+    // <Container>
+    //   {/* <Header props={props} /> */}
+    //   <Contents>
+    //     <View>
+    //       <Text>menu</Text>
+    //     </View>
+    //     <View></View>
+    //     <View></View>
+    //   </Contents>
+    //   {/* <Nav props={props} /> */}
+    // </Container>
   );
 };
 
