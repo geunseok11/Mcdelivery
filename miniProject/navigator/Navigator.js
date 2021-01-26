@@ -9,6 +9,7 @@ import Menu from '../pages/Menu';
 import McDelivery from '../pages/Mcdelivery';
 import Signin from '../pages/Signin';
 import SignUp from '../pages/SignUp';
+import LogoTitle from '../component/LogoTitle';
 
 const Stack = createStackNavigator();
 
@@ -29,16 +30,21 @@ const Navigator = () => {
       <Stack.Screen
         name="Home"
         component={Home}
-        options={{
-          title: 'My home',
-          headerStyle: {
-            backgroundColor: '#f4511e',
+        options={({navigation, route}) => (
+          {
+            headerTitle: (props) => <LogoTitle />,
           },
-          headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-          },
-        }}
+          {
+            title: '맥딜리버리',
+            headerStyle: {
+              backgroundColor: '#f4511e',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }
+        )}
       />
     </Stack.Navigator>
   );

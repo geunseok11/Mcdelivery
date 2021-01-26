@@ -36,19 +36,7 @@ const Stack = createStackNavigator();
 const App: () => React$Node = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{
-            title: 'My home',
-            headerStyle: {
-              backgroundColor: '#f4511e',
-            },
-            headerTintColor: '#fff',
-          }}
-        />
-      </Stack.Navigator>
+      <Navigator />
     </NavigationContainer>
 
     // <Provider store={configureStore}>
