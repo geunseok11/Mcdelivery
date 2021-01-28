@@ -30,21 +30,29 @@ const Navigator = () => {
       <Stack.Screen
         name="Home"
         component={Home}
-        options={({navigation, route}) => (
-          {
+        options={
+          ({navigation, route}) => ({
             headerTitle: (props) => <LogoTitle />,
-          },
-          {
             title: '맥딜리버리',
-            headerStyle: {
-              backgroundColor: '#f4511e',
-            },
-            headerTintColor: '#fff',
-            headerTitleStyle: {
-              fontWeight: 'bold',
-            },
-          }
-        )}
+            //   headerStyle: {
+            //     backgroundColor: '#f4511e',
+            //   },
+            //   headerTintColor: '#fff',
+            //   headerTitleStyle: {
+            //     fontWeight: 'bold',
+            //   },
+          })
+          // {
+          //   title: '맥딜리버리',
+          //   headerStyle: {
+          //     backgroundColor: '#f4511e',
+          //   },
+          //   headerTintColor: '#fff',
+          //   headerTitleStyle: {
+          //     fontWeight: 'bold',
+          //   },
+          // }
+        }
       />
     </Stack.Navigator>
   );
