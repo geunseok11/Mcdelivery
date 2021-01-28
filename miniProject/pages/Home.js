@@ -6,6 +6,7 @@ import {
   TextInput,
   TouchableOpacity,
   Image,
+  Button,
 } from 'react-native';
 import Nav from '../component/Nav';
 import Header from '../component/Header';
@@ -20,12 +21,21 @@ const Contents = styled.ScrollView`
   flex: 1;
 `;
 
-const Home = (props) => {
+const Home = ({navigation}) => {
+  const [count, setCount] = React.useState(0);
+
+  React.useLayoutEffect(() => {
+    navigation.setOptions({
+      headerRight: () => (
+        <Button onPress={() => setCount((c) => c + 1)} title="주문하기" />
+      ),
+    });
+  }, [navigation]);
   return (
     <Container>
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <Text>Home Screen</Text>
-        {/* <Text>Count: {count}</Text> */}
+        <Text>Count: {count}</Text>
       </View>
     </Container>
     // <Container>
