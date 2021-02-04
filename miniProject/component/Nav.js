@@ -1,3 +1,4 @@
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
 import {StyleSheet, Text, View, Input, TouchableOpacity} from 'react-native';
 import Home from '../pages/Home';
@@ -11,22 +12,32 @@ const NavView = styled.View`
   margin-bottom: 0px;
   align-items: center;
   border-radius: 50px;
-  background-color: #f5efef;
+  background-color: white;
 `;
 const NavIcon = styled.TouchableOpacity`
   justify-content: center;
   align-items: center;
   width: 50px;
   height: 50px;
+  border-style: solid;
+  border-color: green;
+`;
+
+const NavText = styled.Text`
+  font-weight: bold;
+  font-size: 15px;
+  color: #464e46;
 `;
 
 const Nav = (props) => {
   return (
     <NavView>
-      <NavIcon
+      <NavText
         onPress={() => {
           props.navigation.push('Home');
-        }}></NavIcon>
+        }}>
+        home
+      </NavText>
 
       <NavIcon
         onPress={() => {

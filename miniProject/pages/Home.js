@@ -21,22 +21,26 @@ const Contents = styled.ScrollView`
   flex: 1;
 `;
 
-const Home = ({navigation}) => {
-  const [count, setCount] = React.useState(0);
+const Home = (props) => {
+  // const [count, setCount] = React.useState(0);
 
-  React.useLayoutEffect(() => {
-    navigation.setOptions({
-      headerRight: () => (
-        <Button onPress={() => setCount((c) => c + 1)} title="주문하기" />
-      ),
-    });
-  }, [navigation]);
+  // React.useLayoutEffect(() => {
+  //   navigation.setOptions({
+  //     headerRight: () => (
+  //       <Button onPress={() => setCount((c) => c + 1)} title="주문하기" />
+  //     ),
+  //   });
+  // }, [navigation]);
   return (
     <Container>
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text>Home Screen</Text>
-        <Text>Count: {count}</Text>
-      </View>
+      <Header props={props} />
+      <Contents>
+        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+          <Text>Home Screen</Text>
+          {/* <Text>Count: {count}</Text> */}
+        </View>
+      </Contents>
+      <Nav props={props} />
     </Container>
     // <Container>
     //   {/* <Header props={props} /> */}
