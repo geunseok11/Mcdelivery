@@ -15,46 +15,46 @@ const Stack = createStackNavigator();
 
 const Navigator = () => {
   return (
-    // <Stack.Navigator screenOptions={{headerShown: false}}>
-    //   <Stack.Screen name="Home" component={Home} />
-    //   <Stack.Screen name="Adress" component={Adress} />
-    //   <Stack.Screen name="Bookmark" component={Bookmark} />
-    //   <Stack.Screen name="Inquiry" component={Inquiry} />
-    //   <Stack.Screen name="List" component={List} />
-    //   <Stack.Screen name="Menu" component={Menu} />
-    //   <Stack.Screen name="McDelivery" component={McDelivery} />
-    //   <Stack.Screen name="Signin" component={Signin} />
-    //   <Stack.Screen name="SignUp" component={SignUp} />
-    // </Stack.Navigator>
-    <Stack.Navigator>
-      <Stack.Screen
-        name="Home"
-        component={Home}
-        options={
-          ({navigation, route}) => ({
-            headerTitle: (props) => <LogoTitle />,
-            title: '맥딜리버리',
-            //   headerStyle: {
-            //     backgroundColor: '#f4511e',
-            //   },
-            //   headerTintColor: '#fff',
-            //   headerTitleStyle: {
-            //     fontWeight: 'bold',
-            //   },
-          })
-          // {
-          //   title: '맥딜리버리',
-          //   headerStyle: {
-          //     backgroundColor: '#f4511e',
-          //   },
-          //   headerTintColor: '#fff',
-          //   headerTitleStyle: {
-          //     fontWeight: 'bold',
-          //   },
-          // }
-        }
-      />
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Adress" component={Adress} />
+      <Stack.Screen name="Bookmark" component={Bookmark} />
+      <Stack.Screen name="Inquiry" component={Inquiry} />
+      <Stack.Screen name="List" component={List} />
+      <Stack.Screen name="Menu" component={Menu} />
+      <Stack.Screen name="McDelivery" component={McDelivery} />
+      <Stack.Screen name="Signin" component={Signin} />
+      <Stack.Screen name="SignUp" component={SignUp} />
     </Stack.Navigator>
+    // <Stack.Navigator>
+    //   <Stack.Screen
+    //     name="Home"
+    //     component={Home}
+    //     // options={
+    //     //   ({navigation, route}) => ({
+    //     //     headerTitle: (props) => <LogoTitle />,
+    //     //     title: '맥딜리버리',
+    //     //     //   headerStyle: {
+    //     //     //     backgroundColor: '#f4511e',
+    //     //     //   },
+    //     //     //   headerTintColor: '#fff',
+    //     //     //   headerTitleStyle: {
+    //     //     //     fontWeight: 'bold',
+    //     //     //   },
+    //     //   })
+    //     //   // {
+    //     //   //   title: '맥딜리버리',
+    //     //   //   headerStyle: {
+    //     //   //     backgroundColor: '#f4511e',
+    //     //   //   },
+    //     //   //   headerTintColor: '#fff',
+    //     //   //   headerTitleStyle: {
+    //     //   //     fontWeight: 'bold',
+    //     //   //   },
+    //     //   // }
+    //     // }
+    //   />
+    // </Stack.Navigator>
   );
 };
 

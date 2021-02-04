@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import {View, Text, TouchableOpacity, TextInput} from 'react-native';
+import LogoTitle from '../component/LogoTitle';
 
 const HeaderView = styled.View`
   height: 50px;
@@ -8,25 +9,27 @@ const HeaderView = styled.View`
   justify-content: space-around;
   margin-top: 0px;
   align-items: center;
-  background-color: #f5efef;
+  background-color: white;
 `;
 
 const HeaderCenterText = styled.Text`
-  color: #464e46;
+  color: #eb0000;
   letter-spacing: 5px;
-  font-size: 23px;
+  font-size: 15px;
   font-family: Consola;
+  margin-left: 20px;
 `;
 
 const Header = (props) => {
   return (
     <HeaderView>
-      <HeaderCenterText onPress={() => props.navigation.push('Home')}>
-        맥딜리버리
-      </HeaderCenterText>
+      <LogoTitle />
+      <HeaderCenterText>EN</HeaderCenterText>
       <HeaderCenterText onPress={() => props.navigation.push('Menu')}>
         주문하기
       </HeaderCenterText>
     </HeaderView>
   );
 };
+
+export default Header;
