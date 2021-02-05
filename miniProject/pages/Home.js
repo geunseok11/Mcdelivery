@@ -21,6 +21,17 @@ const Contents = styled.ScrollView`
   flex: 1;
 `;
 
+const ContentsText = styled.Text`
+  color: #eb0000;
+  width: 150px;
+  height: 200px;
+  letter-spacing: 5px;
+  font-size: 15px;
+  font-family: Consola;
+  margin-left: 0px;
+  border: 2px solid red;
+`;
+
 const Home = (props) => {
   // const [count, setCount] = React.useState(0);
 
@@ -36,7 +47,8 @@ const Home = (props) => {
       <Header props={props} />
       <Contents>
         <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-          <Text>Home Screen</Text>
+          <ContentsText>주문조회</ContentsText>
+          <ContentsText>맥딜리버리 주문하기</ContentsText>
           {/* <Text>Count: {count}</Text> */}
         </View>
       </Contents>

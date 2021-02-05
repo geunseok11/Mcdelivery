@@ -11,7 +11,7 @@ const NavView = styled.View`
   justify-content: space-around;
   margin-bottom: 0px;
   align-items: center;
-  border-radius: 50px;
+  border-radius: 10px;
   background-color: white;
 `;
 const NavIcon = styled.TouchableOpacity`
@@ -19,14 +19,17 @@ const NavIcon = styled.TouchableOpacity`
   align-items: center;
   width: 50px;
   height: 50px;
-  border-style: solid;
-  border-color: green;
+  border: solid green;
 `;
 
 const NavText = styled.Text`
   font-weight: bold;
   font-size: 15px;
+  width: 50px;
+  height: 50px;
+  align-items: center;
   color: #464e46;
+  border: solid green;
 `;
 
 const Nav = (props) => {
@@ -39,7 +42,35 @@ const Nav = (props) => {
         home
       </NavText>
 
-      <NavIcon
+      <NavText
+        onPress={() => {
+          props.navigation.push('Menu');
+        }}>
+        메뉴
+      </NavText>
+
+      <NavText
+        onPress={() => {
+          props.navigation.push('Bookmark');
+        }}>
+        즐겨찾기
+      </NavText>
+
+      <NavText
+        onPress={() => {
+          props.navigation.push('Inquiry');
+        }}>
+        주문조회
+      </NavText>
+
+      <NavText
+        onPress={() => {
+          props.navigation.push('List');
+        }}>
+        더보기
+      </NavText>
+
+      {/* <NavIcon
         onPress={() => {
           props.navigation.push('Menu');
         }}></NavIcon>
@@ -57,7 +88,7 @@ const Nav = (props) => {
       <NavIcon
         onPress={() => {
           props.navigation.push('List');
-        }}></NavIcon>
+        }}></NavIcon> */}
     </NavView>
   );
 };
