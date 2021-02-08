@@ -20,10 +20,19 @@ const Container = styled.SafeAreaView`
 const Contents = styled.ScrollView`
   flex: 1;
 `;
+const CenterText = styled.Text`
+  color: #eb0000;
+  width: 100%;
+  height: 300px;
+  letter-spacing: 5px;
+  font-size: 15px;
+  font-family: Consola;
+  border: 2px solid blue;
+`;
 
 const ContentsText = styled.Text`
   color: #eb0000;
-  width: 150px;
+  width: 50%;
   height: 200px;
   letter-spacing: 5px;
   font-size: 15px;
@@ -46,7 +55,21 @@ const Home = (props) => {
     <Container>
       <Header props={props} />
       <Contents>
-        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+        <View
+          style={{
+            flex: 1,
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+          <CenterText>그림</CenterText>
+        </View>
+        <View
+          style={{
+            flex: 1,
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'row',
+          }}>
           <ContentsText>주문조회</ContentsText>
           <ContentsText>맥딜리버리 주문하기</ContentsText>
           {/* <Text>Count: {count}</Text> */}
